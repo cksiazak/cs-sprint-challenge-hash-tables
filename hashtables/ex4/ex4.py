@@ -1,8 +1,18 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # create empty list
+    result = []
+    # create empty dict
+    cache = {}
+    
+    # iterate through a
+    for num in a:
+        # set cache at num to 1
+        cache[num] = 1
+    # iterate thorugh a
+    for num in a:
+        # if the negative number is in cache and is above zero, add to result
+        if (num*-1) in cache and num > 0:
+            result.append(num)
 
     return result
 
